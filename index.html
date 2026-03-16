@@ -4,50 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexa Buildworks</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 24px;
+            color: gold;
+        }
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: gold;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('hero-image.svg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 0;
+        }
+        .service-card {
+            background: #444;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+        }
+        .about {
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Welcome to Nexa Buildworks</h1>
-            <p>Your partner in construction innovation.</p>
-        </div>
-    </header>
-    <main>
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-item">Service 1</div>
-                <div class="service-item">Service 2</div>
-                <div class="service-item">Service 3</div>
-            </div>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are dedicated to delivering high-quality construction solutions.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message"></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <p>WhatsApp us at <a href="https://wa.me/your_number">this link</a> for quick inquiries!</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Nexa Buildworks. All rights reserved.</p>
-    </footer>
-    <script src="scripts.js"></script>
+
+<header>
+    <nav>
+        <div class="logo">Nexa Buildworks</div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to Nexa Buildworks</h1>
+    <p>Your partner in building a better future.</p>
+</section>
+
+<section id="services" class="services">
+    <div class="service-card">
+        <img src='icon1.svg' alt='Service 1'>
+        <h3>Service 1</h3>
+        <p>Description of service 1.</p>
+    </div>
+    <div class="service-card">
+        <img src='icon2.svg' alt='Service 2'>
+        <h3>Service 2</h3>
+        <p>Description of service 2.</p>
+    </div>
+    <div class="service-card">
+        <img src='icon3.svg' alt='Service 3'>
+        <h3>Service 3</h3>
+        <p>Description of service 3.</p>
+    </div>
+    <div class="service-card">
+        <img src='icon4.svg' alt='Service 4'>
+        <h3>Service 4</h3>
+        <p>Description of service 4.</p>
+    </div>
+    <div class="service-card">
+        <img src='icon5.svg' alt='Service 5'>
+        <h3>Service 5</h3>
+        <p>Description of service 5.</p>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <blockquote>"Building dreams, one project at a time."</blockquote>
+</section>
+
+<section id="contact" class="contact-form">
+    <h2>Contact Us</h2>
+    <form id="form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 Nexa Buildworks. All rights reserved.</p>
+    <p>Contact us via WhatsApp at <a href="https://wa.me/your_number">your_number</a></p>
+</footer>
+
+<script>
+    document.getElementById('form').onsubmit = function(e) {
+        e.preventDefault();
+        // Add form submission logic here.
+        alert('Form submitted!');
+    };
+</script>
+
 </body>
 </html>
