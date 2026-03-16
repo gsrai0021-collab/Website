@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa Buildworks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Nexa Buildworks</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <form id="whatsapp-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="message" placeholder="Your Message" required>
+                <button type="submit">Send via WhatsApp</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Nexa Buildworks. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = event.target.name.value;
+            const message = event.target.message.value;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hi, I'm ${encodeURIComponent(name)}. ${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
