@@ -8,29 +8,46 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Nexa Buildworks</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Welcome to Nexa Buildworks</h1>
+            <p>Your partner in construction innovation.</p>
+        </div>
     </header>
     <main>
-        <section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">Service 1</div>
+                <div class="service-item">Service 2</div>
+                <div class="service-item">Service 3</div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are dedicated to delivering high-quality construction solutions.</p>
+        </section>
+        <section id="contact">
             <h2>Contact Us</h2>
-            <form id="whatsapp-form">
+            <form>
                 <input type="text" name="name" placeholder="Your Name" required>
-                <input type="text" name="message" placeholder="Your Message" required>
-                <button type="submit">Send via WhatsApp</button>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
             </form>
+            <p>WhatsApp us at <a href="https://wa.me/your_number">this link</a> for quick inquiries!</p>
         </section>
     </main>
     <footer>
         <p>&copy; 2026 Nexa Buildworks. All rights reserved.</p>
     </footer>
-    <script>
-        document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = event.target.name.value;
-            const message = event.target.message.value;
-            const whatsappUrl = `https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hi, I'm ${encodeURIComponent(name)}. ${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
